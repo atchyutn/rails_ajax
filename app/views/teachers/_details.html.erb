@@ -1,0 +1,14 @@
+<table class="table">
+  <tr>
+    <td><b>Name</b></td>
+    <td><%= @teacher.name %></td>
+  </tr>
+  <tr>
+    <td><b>Subject</h2></b>
+    <td><%= @teacher.subject %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= link_to 'Edit', edit_teacher_path(@teacher), class: 'btn btn-primary pull-right' %></td>
+  </tr>
+</table>
