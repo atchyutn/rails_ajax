@@ -10,7 +10,7 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.create(teacher_params)
     if @teacher.save
-        redirect_to @teacher, alert: "Teacher created successfully."
+        redirect_to teachers_path, alert: "Teacher created successfully."
     else
         redirect_to new_teacher_path, alert: "Error creating Teacher."
     end
