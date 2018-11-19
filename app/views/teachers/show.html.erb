@@ -1,0 +1,14 @@
+<h1>Teacher Details</h1>
+
+<table class="table table-striped">
+  <tr>
+    <td><b>Name</b></td>
+    <td><%=@teacher.name%></td>
+  </tr>
+  <tr>
+    <td><b>Subject</b></td>
+    <td><%=@teacher.subject%></td>
+  </tr>
+</table>
+
+<%= link_to 'edit', edit_teacher_path(@teacher), class: 'btn btn-primary' %>
