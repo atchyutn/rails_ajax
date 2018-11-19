@@ -1,5 +1,6 @@
-<h1>Teachers List</h1>
-
+<div class="container">
+  <h1>Teachers List</h1>
+  <%= link_to 'Add New Teacher', new_teacher_path, class: 'btn btn-success pull-right'  %>
   <table class="table table-striped">
     <tbody>
       <tr>
@@ -7,12 +8,13 @@
         <td><b>Subject</b></td>
         <td><b>Actions</b></td>
       </tr>
-      <% @teachers.each do |t| %>
+      <% @teachers.each do |teacher| %>
         <tr>
-          <td><%= t.name %></td>
-          <td><%= t.subject%></td>
-          <td><button class="btn btn-primary">View</button><td>
+          <td><%= teacher.name %></td>
+          <td><%= teacher.subject%></td>
+          <td><%= link_to 'Edit', edit_teacher_path(teacher), class: 'btn btn-primary'  %></td>
         </tr>
       <% end %>
     </tbody>
   </table>  
+</div>
